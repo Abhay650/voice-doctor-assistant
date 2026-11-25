@@ -1,0 +1,5 @@
+const get = (u) => fetch(u).then((r) => { if (!r.ok) throw new Error(r.statusText); return r.json() })
+export const fetchDoctors = () => get('/api/doctors')
+export const fetchAppointments = () => get('/api/appointments')
+export const fetchHealth = () => get('/api/health')
+export const resetDemo = () => fetch('/api/reset', { method: 'POST' }).then((r) => r.json())

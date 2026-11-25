@@ -1,0 +1,8 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "Backend", "type": "shell", "command": "cd backend && uvicorn app.main:app --reload --port 8000", "isBackground": true, "problemMatcher": [] },
+    { "label": "Frontend", "type": "shell", "command": "cd frontend && npm run dev", "isBackground": true, "problemMatcher": [] },
+    { "label": "Run all", "dependsOn": ["Backend", "Frontend"], "problemMatcher": [] }
+  ]
+}
